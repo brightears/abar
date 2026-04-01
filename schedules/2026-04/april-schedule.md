@@ -40,7 +40,7 @@
 |------|-----|----|-------|----------|
 | Apr 1 | Wed | Scotty B | 21:00-24:00 | 3 hrs |
 | Apr 2 | Thu | Benji | 21:00-24:00 | 3 hrs |
-| Apr 3 | Fri | Pound | 21:00-24:00 | 3 hrs |
+| Apr 3 | Fri | **UFO** | 21:00-24:00 | 3 hrs |
 | Apr 4 | Sat | Benji | 21:00-24:00 | 3 hrs |
 | Apr 5 | Sun | Pound | 21:00-24:00 | 3 hrs |
 
@@ -60,7 +60,7 @@
 
 | Date | Day | DJ | Hours | Duration |
 |------|-----|----|-------|----------|
-| Apr 13 | Mon | Linze | 21:00-24:00 | 3 hrs |
+| Apr 13 | Mon | **Yui Truluv** | 21:00-24:00 | 3 hrs |
 | Apr 14 | Tue | UFO | 21:00-24:00 | 3 hrs |
 | Apr 15 | Wed | Scotty B | 21:00-24:00 | 3 hrs |
 | Apr 16 | Thu | Benji | 21:00-24:00 | 3 hrs |
