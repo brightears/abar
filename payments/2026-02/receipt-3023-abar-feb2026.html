@@ -26,7 +26,7 @@
     .spacer { flex-grow: 1; }
 
     /* Header */
-    .receipt-title {
+    .invoice-title {
       text-align: center;
       font-size: 10px;
       font-weight: bold;
@@ -92,8 +92,11 @@
       font-weight: normal;
     }
     .col-no { width: 30px; text-align: center; }
-    .col-desc { text-align: center; }
-    .col-amount { width: 120px; text-align: right; }
+    .col-desc { width: 200px; text-align: center; }
+    .col-date { width: 110px; text-align: center; }
+    .col-time { width: 80px; text-align: center; border-left: none; border-right: none; }
+    .col-price { width: 100px; text-align: right; }
+    .col-amount { width: 95px; text-align: right; }
 
     /* Summary rows */
     table.line-items tr.summary-row td {
@@ -108,6 +111,14 @@
       border: 1px solid #bfbfbf;
       text-align: right;
     }
+    table.line-items tr.summary-boxed td.sum-label {
+      border: 1px solid #bfbfbf;
+      text-align: center;
+    }
+    table.line-items tr.summary-boxed td.sum-value {
+      border: 1px solid #bfbfbf;
+      text-align: right;
+    }
 
     /* Written amount */
     .written-amount {
@@ -118,14 +129,6 @@
       margin-top: 16px;
       margin-bottom: 16px;
     }
-
-    /* Payment method */
-    .payment-method {
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-    .payment-method p { line-height: 1.8; }
-    .payment-method .label { font-weight: bold; }
 
     /* Signature */
     .signature {
@@ -139,6 +142,15 @@
     .signature .name { font-weight: bold; }
     .signature .title { font-weight: bold; }
 
+    /* Bank info */
+    .bank-info { margin-top: 20px; }
+    .bank-info .bank-header {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 6px;
+    }
+    .bank-info p { line-height: 1.5; }
+
     /* Email link */
     a { color: #0000ff; }
   </style>
@@ -147,7 +159,7 @@
 <div class="page-wrapper">
 <div class="main-content">
 
-  <p class="receipt-title">Receipt / Tax Invoice</p>
+  <p class="invoice-title">Invoice / Tax Receipt</p>
 
   <div class="header">
     <div class="company-info">
@@ -160,7 +172,7 @@
       <p>Email: <a href="mailto:office@brightears.com">office@brightears.com</a></p>
     </div>
     <div class="meta-info">
-      <p><span class="label">RECEIPT NO.: </span># RE-3023</p>
+      <p><span class="label">INVOICE NO.: </span># 3023</p>
       <p><span class="label">DATE: </span>02.04.2026</p>
       <p><span class="label">TAX NO.: </span>0105550096659</p>
     </div>
@@ -169,7 +181,7 @@
   <div class="customer">
     <table class="customer-table">
       <tr>
-        <td class="cust-label">RECEIVED FROM:</td>
+        <td class="cust-label">CUSTOMER NAME:</td>
         <td>TCC Hotel Asset Management Co., Ltd. (Branch 00008)</td>
       </tr>
       <tr>
@@ -187,33 +199,48 @@
     <tr>
       <th class="col-no">NO.</th>
       <th class="col-desc">DESCRIPTION</th>
-      <th class="col-amount">AMOUNT (THB)</th>
+      <th class="col-date">DATE</th>
+      <th class="col-time">TIME</th>
+      <th class="col-price">PRICE</th>
+      <th class="col-amount">AMOUNT</th>
     </tr>
     <tr>
       <td class="col-no">1</td>
-      <td class="col-desc">Payment for Invoice #3023 — ABar DJ Service (February 2026)</td>
-      <td class="col-amount">77,216.37</td>
-    </tr>
-    <tr>
-      <td class="col-no"></td>
-      <td class="col-desc">Less: WHT 3%</td>
-      <td class="col-amount">-2,164.94</td>
+      <td class="col-desc" style="white-space:nowrap">ABar DJ Service (27 days)</td>
+      <td class="col-date" style="white-space:nowrap">01.02.26 - 28.02.26</td>
+      <td class="col-time" style="white-space:nowrap">21:00 - 24:00 / 22:00 - 24:00</td>
+      <td class="col-price"></td>
+      <td class="col-amount">72,164.83 THB</td>
     </tr>
     <!-- Summary rows -->
     <tr class="summary-row">
-      <td></td>
-      <td class="sum-label">Total Payment Received</td>
+      <td></td><td></td><td></td><td></td>
+      <td class="sum-label">Sub Total</td>
+      <td class="sum-value">72,164.83 THB</td>
+    </tr>
+    <tr class="summary-row">
+      <td></td><td></td><td></td><td></td>
+      <td class="sum-label">Vat 7%</td>
+      <td class="sum-value">5,051.54 THB</td>
+    </tr>
+    <tr class="summary-row">
+      <td></td><td></td><td></td><td></td>
+      <td class="sum-label">Grand Total</td>
+      <td class="sum-value">77,216.37 THB</td>
+    </tr>
+    <tr class="summary-boxed">
+      <td style="border:none;"></td><td style="border:none;"></td><td style="border:none;"></td><td style="border:none;"></td>
+      <td class="sum-label">WHT 3%</td>
+      <td class="sum-value">-2,164.94 THB</td>
+    </tr>
+    <tr class="summary-boxed">
+      <td style="border:none;"></td><td style="border:none;"></td><td style="border:none;"></td><td style="border:none;"></td>
+      <td class="sum-label">Net Amount</td>
       <td class="sum-value">75,051.43 THB</td>
     </tr>
   </table>
 
   <div class="written-amount">SEVENTY-FIVE THOUSAND FIFTY-ONE POINT FORTY-THREE BAHT</div>
-
-  <div class="payment-method">
-    <p><span class="label">Payment Method: </span>Bank Transfer</p>
-    <p><span class="label">Payment Date: </span>02.04.2026</p>
-    <p><span class="label">WHT Certificate No.: </span>To be provided by TCC</p>
-  </div>
 
   <div class="signature">
     <p class="company">Bright Ears Co., Ltd.</p>
@@ -224,6 +251,16 @@
 </div>
 
   <div class="spacer"></div>
+
+  <div class="bank-info">
+    <p class="bank-header">Bank Information:</p>
+    <p>&nbsp;</p>
+    <p>BANK OF AYUDHYA PUBLIC COMPANY LIMITED</p>
+    <p>Fortune Town BR, C.P. Tower II, Ratchadapisek Road, Dindaeng, Bangkok 10400, Thailand.</p>
+    <p>Account Name: Co.,Ltd. Bright Ears</p>
+    <p>Saving Number: 253-1-43635-5</p>
+    <p>Swift Code: AYUDTHBK</p>
+  </div>
 
 </div>
 </body>
