@@ -6,7 +6,7 @@
 - **DJ:** Linze
 - **Time:** 18:00-21:00 (3 hours)
 - **Rate:** Same as ABar resident fee (฿1,030.93/hr invoice rate, ฿3,092.79 total)
-- **Invoice:** Separate line item or separate invoice for TeeShot Bar on April invoice
+- **Invoice:** SEPARATE invoice (not a line item on ABar invoice)
 - **DJ Payment:** Pay Linze 3hrs at standard rate (on top of her regular ABar shifts)
 
 ## Notes for April Invoice
